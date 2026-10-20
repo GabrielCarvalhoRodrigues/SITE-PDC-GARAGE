@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDC Garage | Centro Automotivo</title>
+  <meta name="description" content="PDC Garage – Centro automotivo especializado em veículos importados e premium. Manutenção, diagnóstico, motor, câmbio, suspensão e muito mais.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="/img/logo-escudo.png">
+</head>
+<body>
+
+  <!-- ===== CABEÇALHO ===== -->
+  <header class="cabecalho" id="cabecalho">
+    <div class="conteiner cabecalho__interno">
+      <a href="#inicio" class="logo" aria-label="PDC Garage - início">
+        <img class="logo__escudo" src="img/logo-escudo.png" alt="" aria-hidden="true">
+        <span class="logo__texto">
+          <small>Centro Automotivo</small>
+          <strong>PDC GARAGE</strong>
+        </span>
+      </a>
+
+      <nav class="menu" id="menu">
+        <a href="#servicos">Serviços</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+        <a href="#" class="botao botao--dourado botao--pequeno js-whatsapp">Agendar</a>
+      </nav>
+
+      <button class="botao-menu" id="botaoMenu" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== DESTAQUE (BANNER PRINCIPAL) ===== -->
+  <section class="destaque" id="inicio">
+    <div class="destaque__fundo" aria-hidden="true"></div>
+    <div class="conteiner destaque__conteudo">
+      <span class="sobretitulo">Excelência automotiva para quem exige mais.</span>
+      <h1>Seu carro merece <span class="texto-dourado">cuidado e dedicação de verdade.</span></h1>
+      <div class="linha-vermelha"></div>
+      <p>Do diagnóstico à manutenção, cuidamos do seu veículo com transparência e profissionais especializados. Agende seu atendimento e descubra um novo padrão de cuidado automotivo.</p>
+      <div class="destaque__acoes">
+        <a href="#" class="botao botao--dourado js-whatsapp">
+          <svg viewBox="0 0 24 24" class="icone"><use href="#icone-whats"/></svg>
+          Agendar pelo WhatsApp
+        </a>
+        <a href="#servicos" class="botao botao--contorno">Ver serviços</a>
+      </div>
+      <ul class="destaque__numeros">
+        <li><strong>Qualidade</strong><span>EM CADA SERVIÇO</span></li>
+        <li><strong>Garantia</strong><span>NOS SERVIÇOS REALIZADOS</span></li>
+        <li><strong>Confiança</strong><span>ATENDIMENTO TRANSPARENTE</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== SERVIÇOS ===== -->
+  <section class="secao" id="servicos">
+    <div class="conteiner">
+      <header class="secao__topo">
+        <span class="sobretitulo">O que fazemos</span>
+        <h2>Nossos <span class="texto-dourado">serviços</span></h2>
+        <p>Tudo o que seu veículo precisa, em um só lugar.</p>
+      </header>
+
+      <div class="grade grade--4">
+        <article class="cartao">
+          <div class="cartao__icone"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+          <h3>Revisão e manutenção preventiva</h3>
+          <p>Prevenir sai mais barato que consertar: revisão periódica feita com atenção a cada detalhe.</p>
+        </article>
+        <article class="cartao">
+          <div class="cartao__icone"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4M6 13l3-4 3 3 3-5 3 6"/></svg></div>
+          <h3>Diagnóstico eletrônico</h3>
+          <p>Tecnologia para encontrar o problema de verdade, com explicação clara do que está acontecendo.</p>
+        </article>
+        <article class="cartao">
+          <div class="cartao__icone"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.2 4.2l2.8 2.8M17 17l2.8 2.8M1 12h4M19 12h4M4.2 19.8L7 17M17 7l2.8-2.8"/></svg></div>
+          <h3>Motor e câmbio automático</h3>
+          <p>Reparos de motor, manutenção e troca de fluido de câmbio automático.</p>
+        </article>
+        <article class="cartao">
+          <div class="cartao__icone"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          <h3>Injeção eletrônica e módulos</h3>
+          <p>Limpeza de bicos, codificação e programação de módulos eletrônicos.</p>
+        </article>
+        <article class="cartao">
+          <div class="cartao__icone"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/></svg></div>
+          <h3>Alinhamento e balanceamento</h3>
+          <p>Alinhamento e balanceamento de precisão para mais estabilidade e economia de pneus.</p>
+        </article>
+        <article class="cartao">
+          <div class="cartao__icone"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 8V3M16 12h5"/></svg></div>
+          <h3>Suspensão, freios e pneus</h3>
+          <p>Amortecedores, pastilhas, discos e pneus com inspeção completa de segurança.</p>
+        </article>
+        <article class="cartao">
+          <div class="cartao__icone"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Peças originais</h3>
+          <p>Trabalhamos com peças originais e de primeira linha, com procedência garantida.</p>
+        </article>
+        <article class="cartao">
+          <div class="cartao__icone"><svg viewBox="0 0 24 24"><path d="M12 2.7C12 2.7 5 10 5 15a7 7 0 0 0 14 0c0-5-7-12.3-7-12.3z"/></svg></div>
+          <h3>Troca de óleo e lubrificação</h3>
+          <p>Troca rápida com óleo e filtros de qualidade, no tipo certo para o seu motor e no prazo recomendado.</p>
+        </article>
+      </div>
+
+      <div class="centro">
+        <a href="#" class="botao botao--dourado js-whatsapp">
+          <svg viewBox="0 0 24 24" class="icone"><use href="#icone-whats"/></svg>
+          Solicitar orçamento
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- ===== DIFERENCIAIS ===== -->
+  <section class="secao secao--alternada" id="diferenciais">
+    <div class="conteiner">
+      <header class="secao__topo">
+        <span class="sobretitulo">Por que a PDC</span>
+        <h2>Nossos <span class="texto-dourado">diferenciais</span></h2>
+      </header>
+
+      <div class="grade grade--4">
+        <div class="diferencial">
+          <span class="diferencial__numero">01</span>
+          <h3>Equipe especializada</h3>
+          <p>Equipe experiente e treinada para cuidar do seu carro com atenção a cada detalhe.</p>
+        </div>
+        <div class="diferencial">
+          <span class="diferencial__numero">02</span>
+          <h3>Equipamentos modernos</h3>
+          <p>Ferramentas certas para cada serviço, sem improviso e com mais segurança.</p>
+        </div>
+        <div class="diferencial">
+          <span class="diferencial__numero">03</span>
+          <h3>Qualidade garantida</h3>
+          <p>Peças de procedência e garantia em todos os serviços executados.</p>
+        </div>
+        <div class="diferencial">
+          <span class="diferencial__numero">04</span>
+          <h3>Transparência total</h3>
+          <p>Orçamento detalhado, fotos e aprovação antes de qualquer serviço.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <section class="secao" id="sobre">
+    <div class="conteiner sobre">
+      <div class="sobre__midia" aria-hidden="true">
+        <!-- Troque por uma foto da oficina: <img src="oficina.jpg" alt="Oficina PDC Garage"> -->
+        <div class="sobre__imagem-provisoria">
+          <img src="img/logo-escudo.png" alt="">
+        </div>
+      </div>
+      <div class="sobre__texto">
+        <span class="sobretitulo">Sobre nós</span>
+        <h2>O cuidado que seu carro merece, <span class="texto-dourado">a confiança que você procura</span></h2>
+        <div class="linha-vermelha"></div>
+        <p>A PDC Garage nasceu para oferecer um atendimento de confiança a quem precisa cuidar do carro sem dor de cabeça. Unimos conhecimento técnico, estrutura moderna e um atendimento próximo e honesto.</p>
+        <p>Do check-up preventivo ao reparo mais complexo, cuidamos de cada detalhe para que você rode com segurança, conforto e tranquilidade.</p>
+
+        <ul class="vantagens">
+          <li><svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg>Sala de espera com café e Wi-Fi</li>
+          <li><svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>Monitoramento por câmeras 24h</li>
+          <li><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg>Garantia nos serviços</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Check-up completo</li>
+          <li><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Leva e traz do seu veículo</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>Atendimento personalizado</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHAMADA PARA AÇÃO ===== -->
+  <section class="chamada">
+    <div class="conteiner chamada__interno">
+      <div>
+        <h2>Agende agora a revisão do seu veículo</h2>
+        <p>Fale com a nossa equipe e receba um atendimento rápido pelo WhatsApp.</p>
+      </div>
+      <a href="#" class="botao botao--escuro js-whatsapp">
+        <svg viewBox="0 0 24 24" class="icone"><use href="#icone-whats"/></svg>
+        Falar no WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section class="secao secao--alternada" id="contato">
+    <div class="conteiner contato">
+      <div class="contato__info">
+        <span class="sobretitulo">Onde estamos</span>
+        <h2>Venha nos <span class="texto-dourado">visitar</span></h2>
+        <!-- Troque os dados abaixo pelos dados reais da oficina -->
+        <ul class="contato__lista">
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><strong>Endereço</strong><span>Av. Ministro José Américo, 2189 – Cambeba, Fortaleza/CE</span><a class="contato__rota" href="https://www.google.com/maps/place/PDC+GARAGE/@-3.8113496,-38.4814034,17z/data=!3m1!4b1!4m6!3m5!1s0x7c745fd8422b731:0x3a14287773adf939!8m2!3d-3.8113496!4d-38.4814034!16s%2Fg%2F11ssfdk4r6" target="_blank" rel="noopener">Como chegar →</a></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+            <div><strong>Telefone / WhatsApp</strong><span>(85) 98908-3665</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <div><strong>Horário</strong><span>Segunda a sexta: 07:30h às 17:30h<br>Sábado: 08h às 12h</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            <div><strong>E-mail</strong><span>contato@pdcgarage.com.br</span></div>
+          </li>
+        </ul>
+      </div>
+      <div class="contato__mapa">
+        <!-- Localização da PDC Garage no Google Maps -->
+        <iframe title="Mapa PDC Garage" src="https://maps.google.com/maps?q=-3.8113496,-38.4814034&z=17&hl=pt-BR&output=embed" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <!-- Camada clicável por cima do mapa: abre a rota até a oficina -->
+        <a class="contato__mapa-link" href="https://www.google.com/maps/dir/?api=1&destination=-3.8113496,-38.4814034" target="_blank" rel="noopener" aria-label="Abrir rota até a PDC Garage no Google Maps">
+          <span>
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Clique para traçar a rota
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer class="rodape">
+    <div class="conteiner rodape__interno">
+      <div class="rodape__marca">
+        <strong>PDC GARAGE</strong>
+        <span>Centro Automotivo</span>
+      </div>
+      <nav class="rodape__menu">
+        <a href="#servicos">Serviços</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <p class="rodape__copyright">© <span id="ano"></span> PDC Garage. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante do WhatsApp -->
+  <a href="#" class="whats-flutuante js-whatsapp" aria-label="Falar pelo WhatsApp">
+    <svg viewBox="0 0 24 24"><use href="#icone-whats"/></svg>
+  </a>
+
+  <!-- Ícones reutilizáveis -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="icone-whats" viewBox="0 0 24 24">
+      <path fill="currentColor" stroke="none" d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.300.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.300.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.900 0 5.4-4.4 9.8-9.8 9.8zM20.5 3.5C18.2 1.2 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.5-8.4z"/>
+    </symbol>
+  </svg>
+
+  <script src="app.js"></script>
+</body>
+</html>
