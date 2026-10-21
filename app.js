@@ -1,9 +1,4 @@
-// =========================================================
-// PDC GARAGE – Scripts do site
-// =========================================================
-
-// Configure aqui o número do WhatsApp (somente números, com DDI 55 + DDD)
-const NUMERO_WHATSAPP = "558589083665";
+const NUMERO_WHATSAPP = "5585989083665";
 const MENSAGEM_WHATSAPP = "Olá! Gostaria de agendar um serviço na PDC Garage.";
 
 // Links do WhatsApp
