@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/x-icon" href="/img/logo-escudo.png">
+  <link rel="icon" type="image/png" href="img/logo-escudo.png">
 </head>
 <body>
 
@@ -28,6 +28,7 @@
         <a href="#servicos">Serviços</a>
         <a href="#diferenciais">Diferenciais</a>
         <a href="#sobre">Sobre</a>
+        <a href="#instagram">Instagram</a>
         <a href="#contato">Contato</a>
         <a href="#" class="botao botao--dourado botao--pequeno js-whatsapp">Agendar</a>
       </nav>
@@ -121,7 +122,7 @@
       </div>
     </div>
   </section>
-  <!-- ===== DIFERENCIAIS ===== -->
+  <!--  DIFERENCIAIS  -->
   <section class="secao secao--alternada" id="diferenciais">
     <div class="conteiner">
       <header class="secao__topo">
@@ -154,7 +155,7 @@
     </div>
   </section>
 
-  <!-- ===== SOBRE ===== -->
+  <!--  SOBRE  -->
   <section class="secao" id="sobre">
     <div class="conteiner sobre">
       <div class="sobre__midia" aria-hidden="true">
@@ -178,6 +179,48 @@
           <li><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Leva e traz do seu veículo</li>
           <li><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>Atendimento personalizado</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM  -->
+  <section class="secao secao--alternada" id="instagram">
+    <div class="conteiner">
+      <header class="secao__topo">
+        <span class="sobretitulo">Siga a PDC</span>
+        <h2>Cada carro, <span class="texto-dourado">uma história</span></h2>
+        <p>Bastidores da oficina, dicas de manutenção e os carros que passam por aqui.</p>
+      </header>
+
+      <!-- Posts e vídeos -->
+      <div class="instagram__grade">
+        <a href="#" class="instagram__foto js-instagram" aria-label="Ver post no Instagram">
+          <img src="img/post1.jpg" alt="Post da PDC Garage no Instagram" loading="lazy">
+          <svg viewBox="0 0 24 24"><use href="#icone-instagram"/></svg>
+        </a>
+        <a href="https://www.instagram.com/reel/DdrMKixOt8p/" class="instagram__foto instagram__foto--video" target="_blank" rel="noopener" aria-label="Ver vídeo no Instagram">
+          <img src="img/video1.png" alt="Vídeo da PDC Garage no Instagram" loading="lazy">
+          <svg viewBox="0 0 24 24"><use href="#icone-instagram"/></svg>
+        </a>
+        <a href="#" class="instagram__foto js-instagram" aria-label="Ver post no Instagram">
+          <img src="img/post2.jpg" alt="Post da PDC Garage no Instagram" loading="lazy">
+          <svg viewBox="0 0 24 24"><use href="#icone-instagram"/></svg>
+        </a>
+        <a href="https://www.instagram.com/reel/DewmU7qh1wB/" class="instagram__foto instagram__foto--video" target="_blank" rel="noopener" aria-label="Ver vídeo no Instagram">
+          <img src="img/video2.png" alt="Vídeo da PDC Garage no Instagram" loading="lazy">
+          <svg viewBox="0 0 24 24"><use href="#icone-instagram"/></svg>
+        </a>
+        <a href="#" class="instagram__foto js-instagram" aria-label="Ver post no Instagram">
+          <img src="img/post3.jpg" alt="Post da PDC Garage no Instagram" loading="lazy">
+          <svg viewBox="0 0 24 24"><use href="#icone-instagram"/></svg>
+        </a>
+      </div>
+
+      <div class="centro">
+        <a href="https://www.instagram.com/pdcgarageofc?utm_source=ig_web_button_share_sheet&obrf=ZDNlZDc0MzIxNw==" class="botao botao--contorno js-instagram">
+          <svg viewBox="0 0 24 24" class="icone"><use href="#icone-instagram"/></svg>
+          <span class="js-instagram-usuario">@pdcgarageofc</span>
+        </a>
       </div>
     </div>
   </section>
@@ -259,6 +302,11 @@
 
   <!-- Ícones reutilizáveis -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="icone-instagram" viewBox="0 0 24 24">
+      <rect x="2" y="2" width="20" height="20" rx="5"/>
+      <circle cx="12" cy="12" r="4.5"/>
+      <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/>
+    </symbol>
     <symbol id="icone-whats" viewBox="0 0 24 24">
       <path fill="currentColor" stroke="none" d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.300.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.300.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.900 0 5.4-4.4 9.8-9.8 9.8zM20.5 3.5C18.2 1.2 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.5-8.4z"/>
     </symbol>
