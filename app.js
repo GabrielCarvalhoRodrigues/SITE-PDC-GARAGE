@@ -1,6 +1,18 @@
 const NUMERO_WHATSAPP = "5585989083665";
 const MENSAGEM_WHATSAPP = "Olá! Gostaria de agendar um serviço na PDC Garage.";
 
+const USUARIO_INSTAGRAM = "pdcgarageofc";
+
+// Links do Instagram
+document.querySelectorAll(".js-instagram").forEach((link) => {
+  link.href = `https://www.instagram.com/${USUARIO_INSTAGRAM}/`;
+  link.target = "_blank";
+  link.rel = "noopener";
+});
+document.querySelectorAll(".js-instagram-usuario").forEach((texto) => {
+  texto.textContent = `@${USUARIO_INSTAGRAM}`;
+});
+
 // Links do WhatsApp
 const linkWhatsapp = `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(MENSAGEM_WHATSAPP)}`;
 document.querySelectorAll(".js-whatsapp").forEach((botao) => {
@@ -43,5 +55,8 @@ const observador = new IntersectionObserver((entradas) => {
 
 elementosAnimados.forEach((elemento) => observador.observe(elemento));
 
-// Ano atual no rodapé
+document.getElementById("ano").textContent = new Date().getFullYear();
+
+elementosAnimados.forEach((elemento) => observador.observe(elemento));
+
 document.getElementById("ano").textContent = new Date().getFullYear();
