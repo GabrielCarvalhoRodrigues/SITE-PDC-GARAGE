@@ -322,6 +322,54 @@ svg { stroke: currentColor; stroke-width: 1.8; fill: none; stroke-linecap: round
 .vantagens li { display: flex; align-items: center; gap: 0.75rem; color: var(--prata); font-size: 0.92rem; }
 .vantagens svg { width: 22px; height: 22px; color: var(--dourado); flex-shrink: 0; }
 
+/* ---------- Instagram ---------- */
+.instagram__grade {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+.instagram__foto {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: var(--raio);
+  overflow: hidden;
+  border: 1px solid var(--borda);
+  background: radial-gradient(circle at 50% 40%, #13213a, var(--fundo-cartao));
+  display: grid;
+  place-items: center;
+  color: var(--dourado);
+  transition: transform var(--transicao), border-color var(--transicao);
+}
+.instagram__foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.instagram__foto svg { width: 34px; height: 34px; opacity: 0.6; transition: opacity var(--transicao); }
+.instagram__foto img + svg { position: relative; opacity: 0; }
+.instagram__foto:hover { transform: translateY(-4px); border-color: rgba(201, 162, 74, 0.5); }
+.instagram__foto:hover svg { opacity: 1; }
+.instagram__foto img + svg { filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6)); color: #fff; }
+.instagram__foto:has(img)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 8, 15, 0.45);
+  opacity: 0;
+  transition: opacity var(--transicao);
+}
+.instagram__foto:has(img):hover::after { opacity: 1; }
+.instagram__foto img + svg { z-index: 1; }
+
+/* Ícone de play fixo no canto dos vídeos */
+.instagram__foto--video::before {
+  content: "";
+  position: absolute;
+  top: 10px; right: 10px;
+  z-index: 1;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 8px 0 8px 13px;
+  border-color: transparent transparent transparent #fff;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.7));
+}
+
 /* ---------- Chamada para ação ---------- */
 .chamada { background: var(--gradiente-dourado); padding: 3.5rem 0; }
 .chamada__interno { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
@@ -468,6 +516,7 @@ svg { stroke: currentColor; stroke-width: 1.8; fill: none; stroke-linecap: round
 
 @media (max-width: 560px) {
   .grade--4, .vantagens { grid-template-columns: 1fr; }
+  .instagram__grade { grid-template-columns: repeat(3, 1fr); gap: 0.6rem; }
   .secao { padding: 4.5rem 0; }
   .destaque__numeros { gap: 1.5rem; }
   .chamada__interno, .rodape__interno { flex-direction: column; text-align: center; }
