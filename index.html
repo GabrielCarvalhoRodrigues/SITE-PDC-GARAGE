@@ -158,10 +158,22 @@
   <!--  SOBRE  -->
   <section class="secao" id="sobre">
     <div class="conteiner sobre">
-      <div class="sobre__midia" aria-hidden="true">
-        <!-- Troque por uma foto da oficina: <img src="oficina.jpg" alt="Oficina PDC Garage"> -->
-        <div class="sobre__imagem-provisoria">
-          <img src="img/logo-escudo.png" alt="">
+      <div class="sobre__midia">
+        <!-- Tour 3D: fotos e mapas de profundidade em img/tour, cenas configuradas em tour3d.js -->
+        <div class="tour" id="tour">
+          <canvas class="tour__tela" id="tourTela" aria-label="Tour 3D pelas instalações da PDC Garage" role="img"></canvas>
+          <div class="tour__sombra"></div>
+          <div class="tour__selo"><span></span>Tour 3D</div>
+          <button class="tour__giro" id="tourGiro" type="button">Ativar movimento</button>
+          <button class="tour__seta tour__seta--esq" id="tourAnterior" type="button" aria-label="Foto anterior"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+          <button class="tour__seta tour__seta--dir" id="tourProxima" type="button" aria-label="Próxima foto"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+          <div class="tour__info" id="tourInfo">
+            <div class="tour__passo" id="tourPasso"></div>
+            <h3 class="tour__titulo" id="tourTitulo"></h3>
+            <p class="tour__desc" id="tourDesc"></p>
+          </div>
+          <div class="tour__nav" id="tourNav"></div>
+          <img class="tour__reserva" src="img/tour/fachada.jpg" alt="Fachada da PDC Garage">
         </div>
       </div>
       <div class="sobre__texto">
@@ -313,5 +325,6 @@
   </svg>
 
   <script src="app.js"></script>
+  <script src="tour3d.js"></script>
 </body>
 </html>
