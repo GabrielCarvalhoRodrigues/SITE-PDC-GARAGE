@@ -299,18 +299,103 @@ svg { stroke: currentColor; stroke-width: 1.8; fill: none; stroke-linecap: round
   border-radius: var(--raio);
   opacity: 0.4;
 }
-.sobre__imagem-provisoria,
-.sobre__midia img {
+/* Tour 3D (paralaxe com mapa de profundidade) */
+.tour {
   position: relative;
   aspect-ratio: 4 / 5;
   width: 100%;
-  object-fit: cover;
+  overflow: hidden;
   border-radius: var(--raio);
   background: radial-gradient(circle at 50% 40%, #13213a, var(--fundo-2));
+  touch-action: pan-y;
+}
+.tour__tela { position: absolute; inset: 0; width: 100%; height: 100%; display: block; cursor: grab; }
+.tour__reserva { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.tour.ativo .tour__reserva { display: none; }
+.tour__sombra {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(5, 8, 15, 0.5) 0%, rgba(5, 8, 15, 0) 22%, rgba(5, 8, 15, 0) 52%, rgba(5, 8, 15, 0.92) 100%);
+}
+.tour__selo {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--dourado);
+  background: rgba(5, 8, 15, 0.6);
+  border: 1px solid rgba(201, 162, 74, 0.4);
+  border-radius: 999px;
+  padding: 6px 12px;
+  backdrop-filter: blur(6px);
+}
+.tour__selo span { width: 7px; height: 7px; border-radius: 50%; background: var(--dourado); box-shadow: 0 0 10px var(--dourado); }
+.tour__giro {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: none;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--fundo);
+  background: var(--dourado);
+  border: 0;
+  border-radius: 999px;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+.tour__seta {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 162, 74, 0.55);
+  background: rgba(5, 8, 15, 0.55);
+  color: var(--dourado);
+  cursor: pointer;
   display: grid;
   place-items: center;
+  backdrop-filter: blur(6px);
+  transition: background 0.2s, color 0.2s;
 }
-.sobre__imagem-provisoria img { width: 50%; aspect-ratio: auto; background: none; border-radius: 0; }
+.tour__seta:hover { background: var(--dourado); color: var(--fundo); }
+.tour__seta svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.tour__seta--esq { left: 12px; }
+.tour__seta--dir { right: 12px; }
+.tour__info { position: absolute; left: 18px; right: 18px; bottom: 76px; pointer-events: none; }
+.tour__info > * { transition: opacity 0.45s ease, transform 0.45s ease; }
+.tour__info.trocando > * { opacity: 0; transform: translateY(8px); }
+.tour__passo { font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; color: var(--dourado); margin-bottom: 4px; }
+.tour__titulo { margin: 0 0 4px; font-size: 1.3rem; font-weight: 800; line-height: 1.15; color: #fff; text-shadow: 0 2px 18px rgba(0, 0, 0, 0.6); }
+.tour__desc { margin: 0; font-size: 0.82rem; line-height: 1.5; color: #d7dce5; text-shadow: 0 1px 10px rgba(0, 0, 0, 0.7); }
+.tour__nav { position: absolute; left: 0; right: 0; bottom: 14px; display: flex; justify-content: center; gap: 6px; padding: 0 12px; }
+.tour__mini {
+  width: 54px;
+  height: 40px;
+  flex-shrink: 1;
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 7px;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  background: #111;
+  cursor: pointer;
+  opacity: 0.65;
+  transition: opacity 0.2s, border-color 0.2s, transform 0.2s;
+}
+.tour__mini img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tour__mini:hover { opacity: 0.95; transform: translateY(-2px); }
+.tour__mini.ativo { opacity: 1; border-color: var(--dourado); }
 .sobre__texto p + p { margin-top: 1rem; }
 
 .vantagens {
@@ -345,30 +430,6 @@ svg { stroke: currentColor; stroke-width: 1.8; fill: none; stroke-linecap: round
 .instagram__foto img + svg { position: relative; opacity: 0; }
 .instagram__foto:hover { transform: translateY(-4px); border-color: rgba(201, 162, 74, 0.5); }
 .instagram__foto:hover svg { opacity: 1; }
-.instagram__foto img + svg { filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6)); color: #fff; }
-.instagram__foto:has(img)::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(5, 8, 15, 0.45);
-  opacity: 0;
-  transition: opacity var(--transicao);
-}
-.instagram__foto:has(img):hover::after { opacity: 1; }
-.instagram__foto img + svg { z-index: 1; }
-
-/* Ícone de play fixo no canto dos vídeos */
-.instagram__foto--video::before {
-  content: "";
-  position: absolute;
-  top: 10px; right: 10px;
-  z-index: 1;
-  width: 0; height: 0;
-  border-style: solid;
-  border-width: 8px 0 8px 13px;
-  border-color: transparent transparent transparent #fff;
-  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.7));
-}
 
 /* ---------- Chamada para ação ---------- */
 .chamada { background: var(--gradiente-dourado); padding: 3.5rem 0; }
@@ -516,7 +577,6 @@ svg { stroke: currentColor; stroke-width: 1.8; fill: none; stroke-linecap: round
 
 @media (max-width: 560px) {
   .grade--4, .vantagens { grid-template-columns: 1fr; }
-  .instagram__grade { grid-template-columns: repeat(3, 1fr); gap: 0.6rem; }
   .secao { padding: 4.5rem 0; }
   .destaque__numeros { gap: 1.5rem; }
   .chamada__interno, .rodape__interno { flex-direction: column; text-align: center; }
